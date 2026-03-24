@@ -1,6 +1,7 @@
 import { messages } from "../lib/i18n";
+type Lang = "pt" | "fr";
 
-export default function ComoFunciona({ lang = "pt" }) {
+export default function ComoFunciona({ lang = "pt" }: { lang?: Lang }) {
   const t = messages[lang];
 
   return (
@@ -17,10 +18,8 @@ export default function ComoFunciona({ lang = "pt" }) {
             <div className="w-16 h-16 bg-blue-900 text-white rounded-full flex items-center justify-center text-xl font-semibold mx-auto mb-4">
               1
             </div>
-            <h3 className="font-semibold text-lg mb-2">
-              {t.como_passo1_title}
-            </h3>
-            <p className="text-gray-600">{t.como_passo1_desc}</p>
+            <h3 className="font-semibold text-lg mb-2">{t.passo1_title}</h3>
+            <p className="text-gray-600">{t.passo1_desc}</p>
           </div>
 
           {/* Passo 2 */}
@@ -28,10 +27,8 @@ export default function ComoFunciona({ lang = "pt" }) {
             <div className="w-16 h-16 bg-blue-900 text-white rounded-full flex items-center justify-center text-xl font-semibold mx-auto mb-4">
               2
             </div>
-            <h3 className="font-semibold text-lg mb-2">
-              {t.como_passo2_title}
-            </h3>
-            <p className="text-gray-600">{t.como_passo2_desc}</p>
+            <h3 className="font-semibold text-lg mb-2">{t.passo2_title}</h3>
+            <p className="text-gray-600">{t.passo2_desc}</p>
           </div>
 
           {/* Passo 3 */}
@@ -39,10 +36,8 @@ export default function ComoFunciona({ lang = "pt" }) {
             <div className="w-16 h-16 bg-blue-900 text-white rounded-full flex items-center justify-center text-xl font-semibold mx-auto mb-4">
               3
             </div>
-            <h3 className="font-semibold text-lg mb-2">
-              {t.como_passo3_title}
-            </h3>
-            <p className="text-gray-600">{t.como_passo3_desc}</p>
+            <h3 className="font-semibold text-lg mb-2">{t.passo3_title}</h3>
+            <p className="text-gray-600">{t.passo3_desc}</p>
           </div>
         </div>
       </div>

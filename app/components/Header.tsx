@@ -2,8 +2,14 @@
 
 import { useState, useEffect } from "react";
 import { messages } from "../lib/i18n";
+type Lang = "pt" | "fr";
 
-export default function Header({ lang = "pt", setLang }) {
+type HeaderProps = {
+  lang?: Lang;
+  setLang: (lang: Lang) => void;
+};
+
+export default function Header({ lang = "pt", setLang }: HeaderProps) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 

@@ -2,8 +2,9 @@
 
 import { useState } from "react";
 import { messages } from "../lib/i18n";
+type Lang = "pt" | "fr";
 
-export default function FAQ({ lang = "pt" }) {
+export default function FAQ({ lang = "pt" }: { lang?: Lang }) {
   const [open, setOpen] = useState<number | null>(null);
   const t = messages[lang];
 

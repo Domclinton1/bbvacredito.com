@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
-
-export default function SimuladorBanco() {
+type Lang = "pt" | "fr";
+export default function SimuladorBanco({ lang = "pt" }: { lang?: Lang }) {
   const [tipo, setTipo] = useState("Prêt personnel");
   const [valor, setValor] = useState(10000);
   const [meses, setMeses] = useState(60);

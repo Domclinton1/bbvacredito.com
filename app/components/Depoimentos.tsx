@@ -1,6 +1,7 @@
 import { messages } from "../lib/i18n";
+type Lang = "pt" | "fr";
 
-export default function Depoimentos({ lang = "pt" }) {
+export default function Depoimentos({ lang = "pt" }: { lang?: Lang }) {
   const t = messages[lang];
 
   return (

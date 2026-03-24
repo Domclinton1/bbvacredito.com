@@ -3,8 +3,8 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { messages } from "../lib/i18n";
-
-export default function SimuladorCredito({ lang = "pt" }) {
+type Lang = "pt" | "fr";
+export default function SimuladorCredito({ lang = "pt" }: { lang?: Lang }) {
   const router = useRouter();
   const t = messages[lang];
 

@@ -1,0 +1,132 @@
+{
+  "hero_title": "Simule seu crédito com as melhores taxas",
+  "hero_sub": "Processo rápido, seguro e 100% online",
+  "simulate": "Simular crédito",
+  "send": "Enviar solicitação",
+  "name": "Nome",
+  "phone": "Telefone",
+  "email": "Email",
+  "city": "Cidade",
+
+  "hero_subtitle": "Processo rápido, seguro e 100% online.",
+  "hero_item1": "Aprovação rápida",
+  "hero_item2": "Sem burocracia",
+  "hero_item3": "Atendimento especializado",
+  "beneficios_title": "Vantagens do nosso crédito",
+
+  "beneficio1_title": "Aprovação rápida",
+  "beneficio1_desc": "Retorno em poucos minutos após a simulação.",
+
+  "beneficio2_title": "Processo online",
+  "beneficio2_desc": "Tudo feito sem sair de casa.",
+
+  "beneficio3_title": "Seguro e confiável",
+  "beneficio3_desc": "Seus dados protegidos e criptografados.",
+  "como_title": "Como funciona",
+  "como_subtitle": "Veja como é simples simular e solicitar seu crédito",
+
+  "passo1_title": "Preencha a simulação",
+  "passo1_desc": "Informe seus dados básicos e o valor desejado para análise.",
+
+  "passo2_title": "Análise de crédito",
+  "passo2_desc": "Nossa equipe faz a análise e busca as melhores condições.",
+
+  "passo3_title": "Receba sua proposta",
+  "passo3_desc": "Você recebe a proposta e continua o processo no site oficial.",
+
+  "simule_credito": "Simule o seu crédito",
+  "montante": "Montante",
+  "prazo": "Prazo",
+  "meses": "meses",
+  "mensalidade": "Mensalidade",
+
+  "nome": "Nome completo",
+  "telefone": "Telefone",
+
+  "renda": "Renda mensal",
+  "cidade": "Cidade",
+
+  "privacidade": "Concordo com a política de privacidade",
+  "botao_credito": "Pedido de crédito",
+  "alert_privacidade": "Aceite a política de privacidade",
+
+  "credit_options": [
+    "Crédito pessoal",
+    "Crédito consolidado",
+    "Crédito automóvel novo",
+    "Crédito automóvel usado",
+    "Crédito obras"
+  ],
+
+  "seguranca_title": "Seus dados estão seguros",
+  "seguranca_subtitle": "Trabalhamos com tecnologia de segurança e proteção de dados",
+
+  "seg1_title": "Conexão Segura",
+  "seg1_desc": "Site protegido com criptografia SSL.",
+
+  "seg2_title": "Dados Protegidos",
+  "seg2_desc": "Suas informações são sigilosas e protegidas.",
+
+  "seg3_title": "Proteção de Dados",
+  "seg3_desc": "Seguimos as leis de proteção de dados.",
+
+  "seg4_title": "Ambiente Oficial",
+  "seg4_desc": "Redirecionamento para o site oficial após a simulação.",
+
+  "depoimentos_title": "O que nossos clientes dizem",
+  "depoimentos_subtitle": "Veja a experiência de quem já simulou e solicitou crédito conosco",
+
+  "dep1_text": "Consegui simular meu crédito muito rápido e fui aprovado com uma taxa muito boa. Processo bem simples.",
+  "dep1_nome": "Carlos Henrique",
+  "dep1_cidade": "Belo Horizonte",
+
+  "dep2_text": "Atendimento rápido e seguro. Fiz a simulação e recebi a proposta no mesmo dia.",
+  "dep2_nome": "Mariana Souza",
+  "dep2_cidade": "São Paulo",
+
+  "dep3_text": "Plataforma muito fácil de usar, recomendo para quem precisa de crédito rápido.",
+  "dep3_nome": "João Pedro",
+  "dep3_cidade": "Rio de Janeiro",
+
+  "faq_title": "Perguntas Frequentes",
+  "faq_subtitle": "Tire suas dúvidas sobre a simulação de crédito",
+
+  "faq1_q": "A simulação tem algum custo?",
+  "faq1_a": "Não. A simulação é totalmente gratuita e sem compromisso.",
+
+  "faq2_q": "Quanto tempo demora a análise?",
+  "faq2_a": "Após o envio dos dados, a análise pode levar poucos minutos e você já recebe as opções disponíveis.",
+
+  "faq3_q": "Meus dados estão seguros?",
+  "faq3_a": "Sim. Trabalhamos com criptografia e proteção de dados seguindo a lei de proteção de dados.",
+
+  "faq4_q": "Preciso ter nome limpo?",
+  "faq4_a": "Depende da análise de crédito. Existem opções para diferentes perfis.",
+
+  "faq5_q": "Como recebo a proposta?",
+  "faq5_a": "Após a simulação, você será redirecionado para continuar o processo no site oficial.",
+  "cta_title": "Faça sua simulação agora mesmo",
+  "cta_subtitle": "Leva menos de 1 minuto para verificar as opções disponíveis para você.",
+  "cta_button": "Fazer Simulação",
+  "menu_inicio": "Início",
+  "menu_beneficios": "Benefícios",
+  "menu_como_funciona": "Como funciona",
+  "menu_simulacao": "Simulação",
+
+  "footer_empresa_titulo": "Plataforma de Crédito",
+  "footer_empresa_desc": "Plataforma online de simulação e intermediação de crédito. Processo rápido, seguro e 100% digital.",
+  "footer_links": "Links",
+  "footer_legal": "Informações Legais",
+  "footer_privacidade": "Política de Privacidade",
+  "footer_termos": "Termos de Uso",
+  "footer_atendimento": "Atendimento",
+  "footer_online": "Atendimento online",
+  "footer_dias": "Segunda a Sexta",
+  "footer_horario": "09:00 às 18:00",
+
+  "footer_legal1": "Esta plataforma atua como correspondente e intermediadora de crédito.",
+  "footer_legal2": "Não somos uma instituição financeira.",
+  "footer_legal3": "Ao utilizar este site, você concorda com nossos termos.",
+
+  "aviso_plataforma": "Plataforma de simulação de crédito. Não somos uma instituição financeira."
+}

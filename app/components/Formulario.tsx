@@ -9,8 +9,8 @@ export default function SimuladorCredito({ lang = "pt" }: { lang?: Lang }) {
   const t = messages[lang];
 
   const [tipoCredito, setTipoCredito] = useState(t.credit_options[0]);
-  const [valor, setValor] = useState(10000);
-  const [prazo, setPrazo] = useState(60);
+  const [valor, setValor] = useState(0);
+  const [prazo, setPrazo] = useState(360);
   const [mensalidade, setMensalidade] = useState(0);
 
   const [dados, setDados] = useState({
@@ -61,49 +61,7 @@ export default function SimuladorCredito({ lang = "pt" }: { lang?: Lang }) {
 
   return (
     <section id="simulacao">
-      {/*<div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-14">
-          <h2 className="text-3xl font-semibold mb-4 text-[#001391]">
-            {t.como_title}
-          </h2>
-          <p className="text-gray-600">{t.como_subtitle}</p>
-        </div>
-
-        <div className="grid md:grid-cols-3 gap-10">
-         
-          <div className="text-center">
-            <div className="w-16 h-16 bg-blue-900 text-white rounded-full flex items-center justify-center text-xl font-semibold mx-auto mb-4">
-              1
-            </div>
-            <h3 className="font-semibold text-lg mb-2 text-[#001391]">
-              {t.passo1_title}
-            </h3>
-            <p className="text-gray-600">{t.passo1_desc}</p>
-          </div>
-
-       
-          <div className="text-center">
-            <div className="w-16 h-16 bg-blue-900 text-white rounded-full flex items-center justify-center text-xl font-semibold mx-auto mb-4">
-              2
-            </div>
-            <h3 className=" text-[#001391] font-semibold text-lg mb-2">
-              {t.passo2_title}
-            </h3>
-            <p className="text-gray-600">{t.passo2_desc}</p>
-          </div>
-
-          <div className="text-center">
-            <div className="w-16 h-16 bg-blue-900 text-white rounded-full flex items-center justify-center text-xl font-semibold mx-auto mb-4">
-              3
-            </div>
-            <h3 className="text-[#001391] font-semibold text-lg mb-2">
-              {t.passo3_title}
-            </h3>
-            <p className="text-gray-600">{t.passo3_desc}</p>
-          </div>
-        </div>
-      </div>*/}
-      <div className=" max-w-4xl mx-auto bg-[#004481] text-white p-8 rounded-2xl shadow-xl">
+      <div className=" max-w-2xl mx-auto bg-[#004481] text-white p-8 rounded-2xl shadow-xl">
         <h2 className="text-2xl font-semibold mb-6">{t.simule_credito}</h2>
 
         <form onSubmit={handleSubmit} className="space-y-6">

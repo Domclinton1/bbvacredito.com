@@ -37,7 +37,7 @@ export default function Hero({ lang = "pt" }: { lang?: Lang }) {
           </div>
 
           {/* Simulador */}
-          <div className="w-full bg-white/90 backdrop-blur-md p-6 rounded-2xl shadow-2xl text-black">
+          <div className="w-[450px] backdrop-blur-md py-6 rounded-2xl shadow-2xl text-black">
             <Formulario lang={lang} />
           </div>
         </div>

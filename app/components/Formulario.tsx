@@ -3,14 +3,16 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { messages } from "../lib/i18n";
+
 type Lang = "pt" | "fr";
+
 export default function SimuladorCredito({ lang = "pt" }: { lang?: Lang }) {
   const router = useRouter();
   const t = messages[lang];
 
   const [tipoCredito, setTipoCredito] = useState(t.credit_options[0]);
   const [valor, setValor] = useState(0);
-  const [prazo, setPrazo] = useState(360);
+  const [prazo, setPrazo] = useState(120);
   const [mensalidade, setMensalidade] = useState(0);
 
   const [dados, setDados] = useState({
@@ -25,6 +27,11 @@ export default function SimuladorCredito({ lang = "pt" }: { lang?: Lang }) {
 
   // cálculo da mensalidade
   useEffect(() => {
+    if (valor === 0) {
+      setMensalidade(0);
+      return;
+    }
+
     const taxa = 0.013 / 12;
     const n = prazo;
     const p = valor;
@@ -60,9 +67,11 @@ export default function SimuladorCredito({ lang = "pt" }: { lang?: Lang }) {
   };
 
   return (
-    <section id="simulacao">
-      <div className=" max-w-2xl mx-auto bg-[#004481] text-white p-8 rounded-2xl shadow-xl">
-        <h2 className="text-2xl font-semibold mb-6">{t.simule_credito}</h2>
+    <section id="simulacao" className="w-full">
+      <div className="w-full bg-[#004481] text-white p-6 md:p-8 rounded-2xl shadow-xl">
+        <h2 className="text-xl md:text-2xl font-semibold mb-6 text-center">
+          {t.simule_credito}
+        </h2>
 
         <form onSubmit={handleSubmit} className="space-y-6">
           {/* Tipo crédito */}
@@ -71,9 +80,7 @@ export default function SimuladorCredito({ lang = "pt" }: { lang?: Lang }) {
             onChange={(e) => setTipoCredito(e.target.value)}
           >
             {t.credit_options.map((op) => (
-              <option key={op} className="text-white">
-                {op}
-              </option>
+              <option key={op}>{op}</option>
             ))}
           </select>
 
@@ -82,19 +89,30 @@ export default function SimuladorCredito({ lang = "pt" }: { lang?: Lang }) {
             <label className="font-semibold">
               {t.montante}:
               <span className="ml-2 text-cyan-300 font-bold">
-                € {valor.toLocaleString("pt-BR")}
+                {valor === 0
+                  ? "Selecione o valor"
+                  : `€ ${valor.toLocaleString("pt-BR")}`}
               </span>
             </label>
 
             <input
               type="range"
-              min="30000"
+              min="0"
               max="2000000"
-              step="10000"
+              step="1000"
               value={valor}
               onChange={(e) => setValor(Number(e.target.value))}
               className="w-full accent-cyan-400 cursor-pointer"
             />
+
+            {/* Escala */}
+            <div className="flex justify-between text-xs text-gray-300">
+              <span>€0</span>
+              <span>€500k</span>
+              <span>€1M</span>
+              <span>€1.5M</span>
+              <span>€2M</span>
+            </div>
           </div>
 
           {/* Slider Prazo */}
@@ -115,20 +133,29 @@ export default function SimuladorCredito({ lang = "pt" }: { lang?: Lang }) {
               onChange={(e) => setPrazo(Number(e.target.value))}
               className="w-full accent-cyan-400 cursor-pointer"
             />
+
+            <div className="flex justify-between text-xs text-gray-300">
+              <span>12</span>
+              <span>120</span>
+              <span>240</span>
+              <span>360</span>
+            </div>
           </div>
 
+          {/* Resultado */}
           <div className="bg-blue-800 p-6 rounded-xl text-center">
             <p className="text-sm text-gray-300">Parcela estimada</p>
 
             <p className="text-3xl font-bold text-cyan-300 mt-2">
-              €{" "}
-              {mensalidade.toLocaleString("pt-BR", {
-                minimumFractionDigits: 2,
-              })}
+              {mensalidade === 0
+                ? "€ 0,00"
+                : `€ ${mensalidade.toLocaleString("pt-BR", {
+                    minimumFractionDigits: 2,
+                  })}`}
             </p>
 
             <p className="text-xs text-gray-400 mt-2">
-              Taxa a partir de 1,30% ao ano (simulação)
+              Taxa a partir de 1,30% ao ano
             </p>
           </div>
 

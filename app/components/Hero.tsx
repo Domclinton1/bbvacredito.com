@@ -25,7 +25,7 @@ export default function Hero({ lang = "pt" }: { lang?: Lang }) {
         <div className="relative z-10 w-full max-w-5xl mx-auto flex flex-col items-center text-center text-white gap-10">
           {/* TEXTO */}
           <div className="max-w-3xl">
-            <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-4 leading-tight">
+            <h1 className="text-3xl sm:text-3xl md:text-5xl font-bold mb-4 leading-tight">
               {t.hero_title}
             </h1>
 

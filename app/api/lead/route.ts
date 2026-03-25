@@ -1,51 +1,34 @@
-import { NextResponse } from "next/server";
-import nodemailer from "nodemailer";
+import { Resend } from "resend";
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(req: Request) {
-  try {
-    const data = await req.json();
+  const data = await req.json();
 
-    const transporter = nodemailer.createTransport({
-      host: "smtpout.secureserver.net",
-      port: 465,
-      secure: true,
-      auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
-      },
-    });
+  await resend.emails.send({
+    from: "Simulador <info@bbvacredito.com>",
+    to: ["info@bbvacredito.com"],
+    subject: "Novo Lead - BBVA Crédito",
+    html: `
+      <h2>Novo Lead Recebido</h2>
 
-    await transporter.sendMail({
-      from: `"BBVA Crédito" <${process.env.EMAIL_USER}>`,
-      to: process.env.EMAIL_USER,
-      replyTo: data.email,
-      subject: "Novo Lead - Simulação BBVA",
-      html: `
-        <div style="font-family: Arial; padding:20px">
-          <h2>Novo Lead Recebido</h2>
+      <h3>Dados do Cliente</h3>
+      <p><strong>Nome:</strong> ${data.nome || "-"}</p>
+      <p><strong>Telefone:</strong> ${data.telefone || "-"}</p>
+      <p><strong>Email:</strong> ${data.email || "-"}</p>
+      <p><strong>Cidade:</strong> ${data.cidade || "-"}</p>
+      <p><strong>Renda:</strong> ${data.renda || "-"}</p>
 
-          <h3>Dados do Cliente</h3>
-          <p><b>Nome:</b> ${data.nome}</p>
-          <p><b>Telefone:</b> ${data.telefone}</p>
-          <p><b>Email:</b> ${data.email}</p>
-          <p><b>Cidade:</b> ${data.cidade}</p>
-          <p><b>Renda:</b> ${data.renda}</p>
+      <hr/>
 
-          <hr/>
+      <h3>Simulação</h3>
+      <p><strong>Tipo de crédito:</strong> ${data.tipoCredito || "-"}</p>
+      <p><strong>Valor:</strong> € ${data.valor || "-"}</p>
+      <p><strong>Prazo:</strong> ${data.prazo || "-"} meses</p>
+      <p><strong>Parcela:</strong> € ${data.mensalidade || "-"}</p>
+      <p><strong>Total:</strong> € ${data.total || "-"}</p>
+    `,
+  });
 
-          <h3>Dados da Simulação</h3>
-          <p><b>Tipo de crédito:</b> ${data.tipo}</p>
-          <p><b>Valor solicitado:</b> ${data.valor} €</p>
-          <p><b>Prazo:</b> ${data.meses} meses</p>
-          <p><b>Mensalidade:</b> ${data.mensalidade} €</p>
-          <p><b>Total a pagar:</b> ${data.total} €</p>
-        </div>
-      `,
-    });
-
-    return NextResponse.json({ ok: true });
-  } catch (error) {
-    console.error("Erro ao enviar email:", error);
-    return NextResponse.json({ ok: false });
-  }
+  return Response.json({ success: true });
 }

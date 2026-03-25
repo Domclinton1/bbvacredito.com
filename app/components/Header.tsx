@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { messages } from "../lib/i18n";
+import Link from "next/link";
 
 type Lang = "pt" | "fr";
 
@@ -26,8 +27,8 @@ export default function Header({ lang = "pt", setLang }: HeaderProps) {
   }, []);
 
   const menuItems = [
-    { name: t.menu_beneficios, link: "#beneficios" },
-    { name: t.menu_simulacao, link: "#simulacao" },
+    { name: t.menu_beneficios, link: "/#beneficios" },
+    { name: t.menu_simulacao, link: "/#simulacao" },
     { name: t.menu_quemsomos, link: "https://www.bbva.es/personas.html" },
   ];
 
@@ -40,7 +41,9 @@ export default function Header({ lang = "pt", setLang }: HeaderProps) {
       >
         <div className="max-w-7xl mx-auto flex justify-between items-center h-16 px-6">
           {/* Logo */}
-          <div className="text-[#001391] font-bold text-xl">BBVA Crédito</div>
+          <Link href="/#" className="text-[#001391] font-bold text-xl">
+            BBVA Crédito
+          </Link>
 
           {/* Desktop Menu */}
           <nav className="hidden md:flex gap-8 text-[#001391] font-medium">

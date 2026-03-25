@@ -25,9 +25,7 @@ export default function Header({ lang = "pt", setLang }: HeaderProps) {
   }, []);
 
   const menuItems = [
-    { name: t.menu_inicio, link: "#inicio" },
     { name: t.menu_beneficios, link: "#beneficios" },
-    { name: t.menu_como_funciona, link: "#como-funciona" },
     { name: t.menu_simulacao, link: "#simulacao" },
   ];
 

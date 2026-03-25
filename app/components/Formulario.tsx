@@ -103,7 +103,7 @@ export default function SimuladorCredito({ lang = "pt" }: { lang?: Lang }) {
           </div>
         </div>
       </div>*/}
-      <div className=" max-w-4xl mx-auto bg-[#001391] text-white p-8 rounded-2xl shadow-xl">
+      <div className=" max-w-4xl mx-auto bg-[#004481] text-white p-8 rounded-2xl shadow-xl">
         <h2 className="text-2xl font-semibold mb-6">{t.simule_credito}</h2>
 
         <form onSubmit={handleSubmit} className="space-y-6">

@@ -5,7 +5,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import { messages } from "../lib/i18n";
 import { ReactNode } from "react";
-import AlertBar from "./AlertBar";
+
 type Lang = "pt" | "fr";
 
 export default function ClientWrapper({ children }: { children: ReactNode }) {
@@ -14,8 +14,6 @@ export default function ClientWrapper({ children }: { children: ReactNode }) {
 
   return (
     <>
-      <AlertBar lang={lang} />
-
       <Header lang={lang} setLang={setLang} />
 
       <main className="pt-16">{children}</main>

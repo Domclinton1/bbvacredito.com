@@ -13,12 +13,12 @@ export default function AlertBar({ lang = "pt" }) {
       : "ATTENTION: THE ENTIRE PROCESS IS DONE IN PORTUGUESE. CREDIT AVAILABLE FOR ALL NATIONALITIES.";
 
   return (
-    <div className="w-full bg-red-600 text-white text-center py-2 text-sm font-semibold animate-pulse fixed top-0 z-[999]">
+    <div className="w-full bg-[#001391] text-white text-center py-2 text-sm font-semibold animate-pulse">
       <div className="max-w-7xl mx-auto flex justify-center items-center relative px-6">
         <span>{message}</span>
 
         <button
-          className="absolute right-6 text-white"
+          className="absolute right-6 text-white hover:opacity-70"
           onClick={() => setVisible(false)}
         >
           ✕

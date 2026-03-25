@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { messages } from "../lib/i18n";
+
 type Lang = "pt" | "fr";
 
 type HeaderProps = {
@@ -17,7 +18,7 @@ export default function Header({ lang = "pt", setLang }: HeaderProps) {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 30);
+      setScrolled(window.scrollY > 20);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -34,29 +35,42 @@ export default function Header({ lang = "pt", setLang }: HeaderProps) {
     <>
       <header
         className={`fixed w-full z-50 transition-all duration-300 ${
-          scrolled ? "bg-[#f7f8f8] shadow-lg" : "bg-[#f7f8f8]"
+          scrolled ? "bg-white shadow-md" : "bg-[#f7f8f8]"
         }`}
       >
         <div className="max-w-7xl mx-auto flex justify-between items-center h-16 px-6">
-          <div className="text-[#001391] font-semibold text-xl">
-            Banco Bilbao Vizcaya Argentaria, S.A
-          </div>
+          {/* Logo */}
+          <div className="text-[#001391] font-bold text-xl">BBVA Crédito</div>
 
-          {/* Desktop */}
+          {/* Desktop Menu */}
           <nav className="hidden md:flex gap-8 text-[#001391] font-medium">
             {menuItems.map((item, index) => (
-              <a className="hover:underline" key={index} href={item.link}>
+              <a
+                key={index}
+                href={item.link}
+                className="relative text-lg hover:text-blue-800 transition"
+              >
                 {item.name}
               </a>
             ))}
           </nav>
 
-          {/* Language Switch */}
-          <div className="hidden md:flex gap-2">
-            <button onClick={() => setLang("pt")} className="text-sm">
+          {/* Language */}
+          <div className="hidden md:flex gap-3">
+            <button
+              onClick={() => setLang("pt")}
+              className={`px-2 py-1 rounded ${
+                lang === "pt" ? "bg-[#001391] text-white" : "text-[#001391]"
+              }`}
+            >
               PT
             </button>
-            <button onClick={() => setLang("fr")} className="text-sm">
+            <button
+              onClick={() => setLang("fr")}
+              className={`px-2 py-1 rounded ${
+                lang === "fr" ? "bg-[#001391] text-white" : "text-[#001391]"
+              }`}
+            >
               FR
             </button>
           </div>

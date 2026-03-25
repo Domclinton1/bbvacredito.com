@@ -4,7 +4,7 @@ type Lang = "pt" | "fr";
 export default function SimuladorBanco({ lang = "pt" }: { lang?: Lang }) {
   const [tipo, setTipo] = useState("Prêt personnel");
   const [valor, setValor] = useState(10000);
-  const [meses, setMeses] = useState(60);
+  const [meses, setMeses] = useState(360);
 
   const [open, setOpen] = useState(false);
 
@@ -15,7 +15,7 @@ export default function SimuladorBanco({ lang = "pt" }: { lang?: Lang }) {
   const [cidade, setCidade] = useState("");
   const [renda, setRenda] = useState("");
 
-  const taxa = 0.0795;
+  const taxa = 0.13;
   const mensalidade = ((valor * (1 + taxa)) / meses).toFixed(2);
   const total = (Number(mensalidade) * meses).toFixed(2);
 
@@ -48,7 +48,7 @@ export default function SimuladorBanco({ lang = "pt" }: { lang?: Lang }) {
     <>
       <div className="backdrop-blur-xl bg-white/80 p-8 rounded-2xl shadow-2xl border border-white/40">
         <h2 className="text-2xl font-semibold mb-6 text-blue-900">
-          Simulez votre crédit
+          Simule seu crédito de €30 mil a € 2 milhões.
         </h2>
 
         <div className="grid md:grid-cols-3 gap-6">
@@ -100,7 +100,7 @@ export default function SimuladorBanco({ lang = "pt" }: { lang?: Lang }) {
             </label>
 
             <div className="grid grid-cols-2 gap-2 mt-2">
-              {[24, 30, 36, 42, 48, 60].map((m) => (
+              {[24, 30, 36, 42, 48, 60, 300, 360].map((m) => (
                 <button
                   key={m}
                   onClick={() => setMeses(m)}
@@ -125,7 +125,7 @@ export default function SimuladorBanco({ lang = "pt" }: { lang?: Lang }) {
             <div className="text-sm text-gray-600 space-y-1">
               <p>Montant emprunté: {valor} €</p>
               <p>Durée du crédit: {meses} mois</p>
-              <p>Taux débiteur FIXE: 7.95%</p>
+              <p>Taux débiteur FIXE: 1.3% ao ano</p>
               <p>Total à payer: {total} €</p>
             </div>
 

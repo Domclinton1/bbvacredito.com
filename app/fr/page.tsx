@@ -1,5 +1,4 @@
 import Beneficios from "../components/Beneficios";
-import ComoFunciona from "../components/ComoFunciona";
 import CTA from "../components/CTA";
 import Depoimentos from "../components/Depoimentos";
 import FAQ from "../components/FAQ";
@@ -12,7 +11,6 @@ export default function HomeFR() {
     <main className="flex flex-col" lang="fr">
       <Hero lang="fr" />
       <Beneficios lang="fr" />
-      <ComoFunciona lang="fr" />
       <Formulario lang="fr" />
       <Seguranca lang="fr" />
       <Depoimentos lang="fr" />

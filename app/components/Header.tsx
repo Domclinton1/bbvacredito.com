@@ -40,7 +40,7 @@ export default function Header({ lang = "pt", setLang }: HeaderProps) {
       >
         <div className="max-w-7xl mx-auto flex justify-between items-center h-16 px-6">
           <div className="text-[#001391] font-semibold text-xl">
-            BBVA Crédito
+            Banco Bilbao Vizcaya Argentaria, S.A
           </div>
 
           {/* Desktop */}

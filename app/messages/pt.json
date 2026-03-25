@@ -1,5 +1,5 @@
 {
-  "hero_title": "Simule seu crédito com as melhores taxas",
+  "hero_title": "Criando Oportunidades: O Banco da Era Digital.",
   "hero_sub": "Processo rápido, seguro e 100% online",
   "simulate": "Simular crédito",
   "send": "Enviar solicitação",
@@ -8,20 +8,34 @@
   "email": "Email",
   "city": "Cidade",
 
-  "hero_subtitle": "Processo rápido, seguro e 100% online.",
-  "hero_item1": "Aprovação rápida",
-  "hero_item2": "Sem burocracia",
-  "hero_item3": "Atendimento especializado",
-  "beneficios_title": "Vantagens do nosso crédito",
+  "hero_subtitle": "No BBVA, unimos tecnologia e finanças para que você tenha o controle total da sua vida financeira, onde quer que esteja.",
+  "hero_item1": "Prazo de até 30 anos",
+  "hero_item2": "360 meses",
+  "hero_item3": "Juros de 1.3% ao ano",
+  "beneficios_title": "Mais que um banco, uma Tech-Finance.",
+  "beneficios_subtitle": "Fomos eleitos a melhor experiência de mobile banking do mundo. Nossa plataforma utiliza Inteligência Artificial para analisar seus hábitos e sugerir economias reais.",
+  "beneficio1_title": "Biometria Avançada: ",
+  "beneficio1_desc": "Acesse sua conta e autorize pagamentos com reconhecimento facial.",
 
-  "beneficio1_title": "Aprovação rápida",
-  "beneficio1_desc": "Retorno em poucos minutos após a simulação.",
+  "beneficio2_title": "Bconomy:",
+  "beneficio2_desc": "Uma ferramenta exclusiva que mede sua saúde financeira e te ajuda a criar um colchão de segurança.",
 
-  "beneficio2_title": "Processo online",
-  "beneficio2_desc": "Tudo feito sem sair de casa.",
+  "beneficio3_title": "Cartão Aqua:",
+  "beneficio3_desc": "O primeiro cartão sem números impressos e com CVV dinâmico para máxima segurança em compras online.",
 
-  "beneficio3_title": "Seguro e confiável",
-  "beneficio3_desc": "Seus dados protegidos e criptografados.",
+  "sust_title": "Finanças para um Futuro Sustentável.",
+  "sust_subtitle": "O BBVA assumiu o compromisso de mobilizar €300 bilhões em finanças sustentáveis até 2025. Apoiamos a transição para uma economia de baixo carbono.",
+
+  "sust1_title": "Empréstimo Carro Ecológico:",
+  "sust1_desc": "Taxas reduzidas para veículos híbridos.",
+
+  "sust2_title": "Hipoteca Casa Eficiente:",
+  "sust2_desc": "Bônus na taxa de juros para imóveis com certificado de eficiência energética A ou B.",
+
+  "solu_title": "Soluções para Empresas (Pessoas Jurídicas)",
+  "solu_subtitle": "Impulsione seu Negócio com Experiência Global.",
+  "solu_desc": "Oferecemos soluções de Open Banking e APIs que se integram diretamente ao software de gestão da sua empresa, automatizando pagamentos e conciliação bancária.",
+
   "como_title": "Como funciona",
   "como_subtitle": "Veja como é simples simular e solicitar seu crédito",
 
@@ -113,8 +127,8 @@
   "menu_como_funciona": "Como funciona",
   "menu_simulacao": "Simulação",
 
-  "footer_empresa_titulo": "Plataforma de Crédito",
-  "footer_empresa_desc": "Plataforma online de simulação e intermediação de crédito. Processo rápido, seguro e 100% digital.",
+  "footer_empresa_titulo": "© 2024 Banco Bilbao Vizcaya Argentaria, S.A.",
+  "footer_empresa_desc": "Ciudad BBVA, Calle Azul, 4, Madri, Espanha.",
   "footer_links": "Links",
   "footer_legal": "Informações Legais",
   "footer_privacidade": "Política de Privacidade",

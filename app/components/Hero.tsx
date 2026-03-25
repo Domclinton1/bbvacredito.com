@@ -20,13 +20,13 @@ export default function Hero({ lang = "pt" }: { lang?: Lang }) {
       <div className="relative z-10 max-w-5xl mx-auto px-6 flex flex-col gap-10 items-center text-center text-white">
         {/* Texto */}
         <div>
-          <h1 className="text-5xl font-bold mb-6 leading-tight">
+          <h1 className="text-6xl font-bold mb-6 leading-tight">
             {t.hero_title}
           </h1>
 
-          <p className="text-lg mb-6">{t.hero_subtitle}</p>
+          <p className="text-3xl mb-6">{t.hero_subtitle}</p>
 
-          <ul className="space-y-2">
+          <ul className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-10 text-base md:text-xl">
             <li>✓ {t.hero_item1}</li>
             <li>✓ {t.hero_item2}</li>
             <li>✓ {t.hero_item3}</li>

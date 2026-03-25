@@ -60,8 +60,8 @@ export default function SimuladorCredito({ lang = "pt" }: { lang?: Lang }) {
   };
 
   return (
-    <section id="simulacao" className="py-20 bg-gray-100">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="simulacao">
+      {/*<div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-14">
           <h2 className="text-3xl font-semibold mb-4 text-[#001391]">
             {t.como_title}
@@ -70,7 +70,7 @@ export default function SimuladorCredito({ lang = "pt" }: { lang?: Lang }) {
         </div>
 
         <div className="grid md:grid-cols-3 gap-10">
-          {/* Passo 1 */}
+         
           <div className="text-center">
             <div className="w-16 h-16 bg-blue-900 text-white rounded-full flex items-center justify-center text-xl font-semibold mx-auto mb-4">
               1
@@ -81,7 +81,7 @@ export default function SimuladorCredito({ lang = "pt" }: { lang?: Lang }) {
             <p className="text-gray-600">{t.passo1_desc}</p>
           </div>
 
-          {/* Passo 2 */}
+       
           <div className="text-center">
             <div className="w-16 h-16 bg-blue-900 text-white rounded-full flex items-center justify-center text-xl font-semibold mx-auto mb-4">
               2
@@ -92,7 +92,6 @@ export default function SimuladorCredito({ lang = "pt" }: { lang?: Lang }) {
             <p className="text-gray-600">{t.passo2_desc}</p>
           </div>
 
-          {/* Passo 3 */}
           <div className="text-center">
             <div className="w-16 h-16 bg-blue-900 text-white rounded-full flex items-center justify-center text-xl font-semibold mx-auto mb-4">
               3
@@ -103,8 +102,8 @@ export default function SimuladorCredito({ lang = "pt" }: { lang?: Lang }) {
             <p className="text-gray-600">{t.passo3_desc}</p>
           </div>
         </div>
-      </div>
-      <div className="mt-20 max-w-4xl mx-auto bg-[#001391] text-white p-8 rounded-2xl shadow-xl">
+      </div>*/}
+      <div className=" max-w-4xl mx-auto bg-[#001391] text-white p-8 rounded-2xl shadow-xl">
         <h2 className="text-2xl font-semibold mb-6">{t.simule_credito}</h2>
 
         <form onSubmit={handleSubmit} className="space-y-6">

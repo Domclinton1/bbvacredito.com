@@ -1,5 +1,5 @@
-import SimuladorBanco from "./SImuladorBanco";
 import { messages } from "../lib/i18n";
+import Formulario from "./Formulario";
 type Lang = "pt" | "fr";
 
 export default function Hero({ lang = "pt" }: { lang?: Lang }) {
@@ -35,7 +35,7 @@ export default function Hero({ lang = "pt" }: { lang?: Lang }) {
 
         {/* Simulador */}
         <div className="w-full bg-white/90 backdrop-blur-md p-6 rounded-2xl shadow-2xl text-black">
-          <SimuladorBanco lang={lang} />
+          <Formulario lang={lang} />
         </div>
       </div>
     </section>

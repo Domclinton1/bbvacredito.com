@@ -48,7 +48,7 @@
   "passo3_title": "Receba sua proposta",
   "passo3_desc": "Você recebe a proposta e continua o processo no site oficial.",
 
-  "simule_credito": "Simule o seu crédito",
+  "simule_credito": "Para prosseguir, preencha o formulário",
   "montante": "Montante",
   "prazo": "Prazo",
   "meses": "meses",
@@ -64,13 +64,7 @@
   "botao_credito": "Pedido de crédito",
   "alert_privacidade": "Aceite a política de privacidade",
 
-  "credit_options": [
-    "Crédito pessoal",
-    "Crédito consolidado",
-    "Crédito automóvel novo",
-    "Crédito automóvel usado",
-    "Crédito obras"
-  ],
+  "credit_options": ["Crédito pessoal", "Crédito empresa"],
 
   "seguranca_title": "Seus dados estão seguros",
   "seguranca_subtitle": "Trabalhamos com tecnologia de segurança e proteção de dados",
@@ -126,6 +120,7 @@
   "menu_beneficios": "Benefícios",
   "menu_como_funciona": "Como funciona",
   "menu_simulacao": "Simulação",
+  "menu_quemsomos": "Quem somos",
 
   "footer_empresa_titulo": "© 2024 Banco Bilbao Vizcaya Argentaria, S.A.",
   "footer_empresa_desc": "Ciudad BBVA, Calle Azul, 4, Madri, Espanha.",

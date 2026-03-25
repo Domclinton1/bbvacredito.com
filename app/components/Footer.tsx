@@ -50,7 +50,7 @@ export default function Footer({ lang = "pt" }: { lang?: Lang }) {
             <li>{t.footer_online}</li>
             <li>{t.footer_dias}</li>
             <li>{t.footer_horario}</li>
-            <li>contato@seudominio.com</li>
+            <li>info@bbvacredito.com</li>
           </ul>
         </div>
       </div>

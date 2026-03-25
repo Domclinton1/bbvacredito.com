@@ -27,13 +27,14 @@ export default function Header({ lang = "pt", setLang }: HeaderProps) {
   const menuItems = [
     { name: t.menu_beneficios, link: "#beneficios" },
     { name: t.menu_simulacao, link: "#simulacao" },
+    { name: t.menu_quemsomos, link: "https://www.bbva.es/personas.html" },
   ];
 
   return (
     <>
       <header
         className={`fixed w-full z-50 transition-all duration-300 ${
-          scrolled ? "bg-[#f7f8f8] shadow-lg" : "bg-transparent"
+          scrolled ? "bg-[#f7f8f8] shadow-lg" : "bg-[#f7f8f8]"
         }`}
       >
         <div className="max-w-7xl mx-auto flex justify-between items-center h-16 px-6">
